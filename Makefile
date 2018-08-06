@@ -5,3 +5,4 @@ $(V) : $(V).c
 
 .PHONY : clean
 clean :
+	rm $(V)
