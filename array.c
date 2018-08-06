@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-typedef struct Array
+struct Array
 {
 	int *pm_base;
 	int m_length;
 	int m_volume;
-}ARRAY,*P_ARRAY;
+};
+
+typedef struct Array ARRAY, *P_ARRAY;
 
 bool array_create(P_ARRAY, int);
 bool array_destroy(P_ARRAY);
