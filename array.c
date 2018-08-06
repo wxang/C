@@ -3,9 +3,9 @@
 #include <stdbool.h>
 
 typedef struct Array{
-	int *p_base;
-	int length;
-	int volume;
+	int *pm_base;
+	int m_length;
+	int m_volume;
 }ARRAY,*P_ARRAY;
 
 bool array_create(P_ARRAY, int);
