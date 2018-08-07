@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define print(INFO) printf("Print: %s.\n", INFO)
+#define error(INFO) printf("Error: %s!\n", INFO)
+
 struct Array
 {
 	int *pm_base;
