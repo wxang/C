@@ -18,6 +18,22 @@ bool node_insert(P_ARRAY, int, int);
 bool node_delete(P_ARRAY, int);
 bool node_search(P_ARRAY, int);
 
+bool array_init(P_ARRAY p_array)
+{
+	if(is_null(p_array))
+	{
+		error("array_init");
+		return false;
+	}
+	for(int i=0; i<p_array->m_volume; i++)
+	{
+		p_array->pm_base[i] = i;
+		p_array->m_length++;
+	}
+	print("array_init");
+	return true;
+}
+
 int main(void)
 {
 	ARRAY my_array;
