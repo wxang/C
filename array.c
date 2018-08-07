@@ -18,6 +18,16 @@ bool node_insert(P_ARRAY, int, int);
 bool node_delete(P_ARRAY, int);
 bool node_search(P_ARRAY, int);
 
+bool is_full(P_ARRAY p_array)
+{
+	if(p_array->m_volume==p_array->m_length)
+	{
+		error("is_full");
+		return true;
+	}
+	return false;
+}
+
 bool is_empty(P_ARRAY p_array)
 {
 	if(0==p_array->m_length)
