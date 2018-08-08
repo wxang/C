@@ -106,3 +106,18 @@ bool array_destroy(P_ARRAY p_array)
 	print("array_destroy");
 	return true;
 }
+
+bool array_traverse(P_ARRAY p_array)
+{
+	if(is_null(p_array))
+	{
+		error("array_traverse");
+		return false;
+	}
+	for(int i=0; i<p_array->m_length; i++)
+	{
+		printf("A[%d]=%d\t", i, p_array->pm_base[i]);
+	}
+	print("array_traverse");
+	return true;
+}
