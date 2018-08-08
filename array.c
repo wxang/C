@@ -74,3 +74,20 @@ int main(void)
 	ARRAY my_array;
 	return 0;
 }
+
+bool array_create(P_ARRAY p_array, int volume)
+{
+	p_array->pm_base = (int*)malloc(sizeof(int)*volume);
+	if(NULL==p_array->pm_base)
+	{
+		error("array_create");
+		return false;
+	}
+	else
+	{
+		p_array->m_volume = volume;
+		p_array->m_length = 0;
+		print("array_create");
+		return true;
+	}
+}
