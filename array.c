@@ -5,6 +5,8 @@
 #define print(INFO) printf("Print: %s.\n", INFO)
 #define error(INFO) printf("Error: %s!\n", INFO)
 
+#define VOL 5
+
 struct Array
 {
 	int *pm_base;
