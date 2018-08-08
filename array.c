@@ -91,3 +91,18 @@ bool array_create(P_ARRAY p_array, int volume)
 		return true;
 	}
 }
+
+bool array_destroy(P_ARRAY p_array)
+{
+	if(is_null(p_array))
+	{
+		error("array_destroy");
+		return false;
+	}
+	p_array->m_length = 0;
+	p_array->m_volume = 0;
+	free(p_array->pm_base);
+	p_array->pm_base = NULL;
+	print("array_destroy");
+	return true;
+}
