@@ -162,3 +162,20 @@ bool node_delete(P_ARRAY p_array, int index)
 	print("node_delete");
 	return true;
 }
+
+bool node_search(P_ARRAY p_array, int index)
+{
+	if(is_null(p_array))
+	{
+		error("node_search");
+		return false;
+	}
+	if(index<0 || index>=p_array->m_length)
+	{
+		error("node_search, Invalid Index");
+		return false;
+	}
+	printf("A[%d]=%d\t", index, p_array->pm_base[index]);
+	print("node_search");
+	return true;
+}
