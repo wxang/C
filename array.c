@@ -121,3 +121,26 @@ bool array_traverse(P_ARRAY p_array)
 	print("array_traverse");
 	return true;
 }
+
+bool node_insert(P_ARRAY p_array, int index, int value)
+{
+	if(is_full(p_array))
+	{
+		error("node_insert");
+		return false;
+	}
+	if(index<0 || index>p_array->m_length)
+	{
+		error("node_insert, Invalid Index");
+		return false;
+	}
+	for(int i=p_array->m_length; i>index; i--)
+	{
+		p_array->pm_base[i] = p_array->pm_base[i-1];
+	}
+	p_array->m_length++;
+	p_array->pm_base[index] = value;
+	printf("A[%d]=%d\t", index, value);
+	print("node_insert");
+	return true;
+}
