@@ -144,3 +144,21 @@ bool node_insert(P_ARRAY p_array, int index, int value)
 	print("node_insert");
 	return true;
 }
+
+bool node_delete(P_ARRAY p_array, int index)
+{
+	if(!node_search(p_array, index))
+	{
+		error("node_delete");
+		return false;
+	}
+	printf("A[%d]=%d\t", index, p_array->pm_base[index]);
+	for(int i=index; i<(p_array->m_length-1); i++)
+	{
+		p_array->pm_base[i] = p_array->pm_base[i+1];
+	}
+	p_array->m_length--;
+	p_array->pm_base[p_array->m_length] = 0;
+	print("node_delete");
+	return true;
+}
