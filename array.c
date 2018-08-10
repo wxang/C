@@ -76,6 +76,8 @@ int main(void)
 	array_create(&my_array, VOL);
 	array_init(&my_array);
 	array_traverse(&my_array);
+	node_delete(&my_array, VOL-1);
+	node_insert(&my_array, VOL-1, VOL);
 	array_destroy(&my_array);
 	
 	return 0;
