@@ -72,6 +72,12 @@ bool array_init(P_ARRAY p_array)
 int main(void)
 {
 	ARRAY my_array;
+	
+	array_create(&my_array, VOL);
+	array_init(&my_array);
+	array_traverse(&my_array);
+	array_destroy(&my_array);
+	
 	return 0;
 }
 
